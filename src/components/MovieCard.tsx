@@ -37,5 +37,5 @@ function MovieCardComponent(props: MovieCardProps) {
 }
 
 export const MovieCard = memo(MovieCardComponent, (prevProps, nextProps) => {
-  return Object.is(prevProps, nextProps);
+  return prevProps.title === nextProps.title;
 });
